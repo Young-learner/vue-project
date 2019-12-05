@@ -21,3 +21,6 @@
 
 ##加载首页轮播图数据
 1.获取数据，如何获取,使用vue-resourse
+2.使用vue-resourse的this.$http.get获取数据
+3.获取的数据,要保存到data
+4.使用v-for循环渲染每个item项
