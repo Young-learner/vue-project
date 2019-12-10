@@ -64,12 +64,11 @@
                     .then(function (result) {
                         if(result.body.status === 0){
                             //拼接评论对象
-                            var cmt = {user_name:'匿名用户',add_time:Date.now(),content:this.msg.trim();
+                            var cmt = { user_name:'匿名用户',add_time:Date.now(),content:this.msg.trim() };
                             this.comments.unshift(cmt);
                             this.msg="";
                             }
-                        }
-                    })
+                    });
 
             }
         },

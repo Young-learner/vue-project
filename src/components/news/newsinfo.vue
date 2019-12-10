@@ -12,7 +12,9 @@
 
     </div>
     <!--内容区-->
-    <div class="content" v-html="newsinfo.content"></div>
+    <div class="content" v-html="newsinfo.content">
+
+    </div>
 
     <!--评论子组件区域-->
     <comment-box :id="this.id"></comment-box>

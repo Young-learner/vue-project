@@ -67,4 +67,6 @@
 	.v-leave-active{
 		transition: all 0.5s ease;
 	}
+
+	/*更改类名,解决tabber点击无法切换的问题*/
 </style>
