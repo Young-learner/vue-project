@@ -7,6 +7,7 @@ import SearchContainer from './components/tabber/SearchContainer.vue'
 import NewsList from './components/news/newlist.vue'
 import NewsInfo from './components/news/newsinfo.vue'
 import PhotoList from './components/photos/Photolist.vue'
+import PhotoInfo from './components/photos/Photoinfo.vue'
 
 //创建路由对象
 var router = new VueRouter({
@@ -19,6 +20,7 @@ var router = new VueRouter({
         {path:'/home/newslist',component:NewsList},
         {path:'/home/newsinfo/:id',component:NewsInfo},
         {path:'/home/PhoteList',component:PhotoList},
+        {path:'/home/PhotoInfo/:id',component:PhotoInfo},
     ],
     linkActiveClass:'mui-active'//覆盖默认路由高亮的类
 });
