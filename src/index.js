@@ -13,6 +13,8 @@ import VueResurce from 'vue-resource'
 Vue.use(VueResurce);
 //设置请求根路径
 Vue.http.options.root = 'http://www.liulongbin.top:3005';
+//设置全局post时候表单数据格式
+Vue.http.options.emulateJSON = true;
 
 //定义全局的过滤器
 //导入过滤器组件
@@ -20,6 +22,7 @@ import moment from 'moment'
 Vue.filter('dateFormat',function (dataStr,pattern='YYYY-MM-DD HH:mm:ss') {
     return moment(dataStr).format(pattern)
 });
+
 
 //导入mui的样式
 import './lib/mui/css/mui.min.css'
