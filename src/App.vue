@@ -23,7 +23,7 @@
 			</router-link>
 			<router-link class="mui-tab-item-tl" to="/shopcar">
 				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
-					<span class="mui-badge">
+					<span class="mui-badge" id="badge">
 						0
 					</span>
 				</span>
