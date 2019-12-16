@@ -105,6 +105,15 @@
             addToShopCar(){
                 //添加到购物车
                 this.ballFlag =! this.ballFlag;
+                //拼接出一个要保存到stroe中car 数组的商品对象
+                var goodsinfo = {
+                    id:this.id,
+                    count:this.selectedCount,
+                    price:this.goodsinfo.sell_price,
+                    selected:true
+                };
+                //调用store中的mutation来将商品加入购物车
+                this.$store.commit("addToCar",goodsinfo);
             },
             beforeEnter(el){
                 el.style.transfrom = "translate(0,0)";

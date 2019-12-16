@@ -1,7 +1,11 @@
 <template>
     <div class="app-container">
         <!--顶部header区域-->
-        <mt-header fixed title="vue学习项目"></mt-header>
+        <mt-header fixed title="vue学习项目">
+			<span slot="left" @click="goBack" v-show="flag">
+				<mt-button icon="back">返回</mt-button>
+			</span>
+		</mt-header>
 
 
         <!--中间的路由 router-view 区域-->
@@ -24,7 +28,7 @@
 			<router-link class="mui-tab-item-tl" to="/shopcar">
 				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
 					<span class="mui-badge" id="badge">
-						0
+						{{$store.getters.getAllCount}}
 					</span>
 				</span>
 				<span class="mui-tab-label">
@@ -42,7 +46,30 @@
 </template>
 
 <script>
-
+	export default {
+		data(){
+			return {
+				flag : false,
+		},
+		created(){
+			this.flag = this.$router.path === "/home" ? false : true;
+		},
+		methods:{
+			goBack(){
+				//点击后退
+				this.$router.go(-1);
+			},
+		},
+		watch:{
+			'$router.path':function (newVal) {
+				if(newVal==='/home'){
+					this.flag = false;
+				}else {
+					this.flag = true;
+				}
+			}
+		}
+	}
 </script>
 
 
